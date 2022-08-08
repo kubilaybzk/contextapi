@@ -19,8 +19,8 @@ export default function Home() {
   }
   return (
     <>
-      <Navbar user={user} setUser={user} />
-      <button onClick={(e) => getUserFromSession()}> Giriş Yap </button>
+      <Navbar user={user} setUser={setUser} Logout={Logout} LogIn={LogIn} />
+      <button onClick={(e) => LogIn()}> Giriş Yap </button>
       <button onClick={(e) => Logout()}> Çıkış Yap </button>
     </>
   );

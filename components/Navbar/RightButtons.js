@@ -1,9 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class RightButtons extends Component {
-  render() {
-    return (
-      <div>RightButtons</div>
-    )
-  }
+export default function RightButtons({user,setUser,Logout,LogIn}) {
+  return (
+    <div style={{display:"flex",flexDirection:"row"}}>
+        <button>
+{user? user : "Giriş Yap"}
+        </button>
+        <button>
+        {user? "Çıkış Yap":"Kayıt ol"}
+        </button>
+    </div>
+  )
 }
