@@ -1,7 +1,12 @@
-import '../styles/globals.css'
+import { UserConsumer } from "../context/authenticator";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <UserConsumer>
+      <Component {...pageProps} />
+    </UserConsumer>
+  );
 }
 
-export default MyApp
+export default MyApp;
